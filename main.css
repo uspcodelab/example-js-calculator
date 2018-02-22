@@ -1,16 +1,19 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  font: bold 17px Arial, sans-serif;
 }
 
 .container {
   display: flex;
   flex-flow: column;
+  
+  min-height: 100vh;
   background: #888;
+  background-size: cover;
 
   justify-content: space-around;
   align-items: center;
-
-  min-height: 100vh;
 }
 
 .calc {
@@ -21,22 +24,35 @@ body {
   max-width: 40%;
   min-width: 30%;
 
-  max-height: 70vh;
-  min-height: 70vh;
+  max-height: 75vh;
+  min-height: 75vh;
+
+  margin: 100px auto;
+  padding: 20px 20px 15px 20px;
+  
+  background: #D8F3FFA2;
+	border-radius: 3px;
+	box-shadow: 0px 4px #FFA46D, 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .visor {
   grid-row: 1 / 2;
   grid-column: 1 / 3;
 
-  background: #00FF00;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  flex-wrap: nowrap;
-  overflow: auto;
+  padding: 0 10px;
+  margin-bottom: 10px;
+	
+	background: #FFFFFF8C;
+	border-radius: 3px;
+  box-shadow: inset 0px 4px #00000033;
+  
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+	
+	font-size: 32px;
+	color: #242323;
+	letter-spacing: 1px;
 }
 
 .numpad {
@@ -46,7 +62,8 @@ body {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
 
-  background: #000000;
+  background: #FFA46D;
+  border-radius: 3px;
 }
 
 .num_wrapper {
@@ -63,13 +80,15 @@ body {
 .numbtn {
   margin: 4px;
   flex: 1 1;
-  background: #0000FF;
+  background: #FFFFFF8C;
   text-align: center;
   align-self: stretch;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border-radius: 3px;
 }
 
 .numpad-left {
@@ -91,13 +110,15 @@ body {
 .oppad {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-around; 
   align-items: center;
 
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 
-  background: #FF0000;
+  background: #FFA46D;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .op_wrapper {
@@ -108,10 +129,11 @@ body {
 }
 
 .opbtn {
-  background: #ffa46d;
+  background: #FFFFFF8C;
   text-align: center;
   align-self: stretch;
-  margin: 4px 4px 0 4px;
+  margin: 4px 8px 0 4px;
+  border-radius: 3px;
 }
 
 .op_wrapper:last-child>.opbtn {
