@@ -4,6 +4,10 @@
   font: bold 17px Arial, sans-serif;
 }
 
+:root {
+  --orangeUCL: #FFA46D;
+}
+
 .container {
   display: flex;
   flex-flow: column;
@@ -32,7 +36,7 @@
   
   background: #D8F3FFA2;
 	border-radius: 3px;
-	box-shadow: 0px 4px #FFA46D, 0px 10px 15px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 4px var(--orangeUCL), 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .visor {
@@ -62,7 +66,7 @@
   grid-row: 2 / 3;
   grid-column: 1 / 2;
 
-  background: #FFA46D;
+  background: var(--orangeUCL);
   border-radius: 3px;
 }
 
@@ -100,7 +104,7 @@
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 
-  background: #FFA46D;
+  background: var(--orangeUCL);
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 
