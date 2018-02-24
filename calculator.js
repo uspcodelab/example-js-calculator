@@ -41,7 +41,7 @@ numButtons.forEach(numButton => numButton.addEventListener("click", function (ev
 
 function keyClicked(event) {
     // mostrar como imprimir no console ajuda a saber q está funcionando
-    // console.log(event.srcElement.innerText);
+    console.log(event.srcElement.innerText);
 
     let visor = document.querySelector(".visor");
     // essa variável não precisava existir, é apenas para ficar mais
@@ -54,7 +54,7 @@ function keyClicked(event) {
         visor.innerHTML = "";
     }
     else {
-        visor.innerHTML = visorNow + num;
+        visor.innerHTML = visorNow + key;
     }
 }
 
