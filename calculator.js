@@ -61,4 +61,18 @@ function keyClicked(event) {
 const numButtons = document.querySelectorAll('.numbtn');
 numButtons.forEach(numButton => numButton.addEventListener("click", keyClicked));
 
+/****************************************************  
+ Nesse ponto, o numpad está completamente funcional
+****************************************************/
 
+// Podemos fazer o "fluxo" das operações de pelo menos duas formas
+
+// 1 - O número que está no visor "pisca" quando clicamos na operação
+// e o visor é "reiniciado" quando digitamos um número de novo.
+// (um pouco mais difícil de implementar, mas mais fácil de validar a expressão)
+
+// 2 - As operações são colocadas no visor sem limpar o visor, ou seja,
+// o usuário digita a expressão completa no visor e a expressão é validada
+// quando usamos o '='.
+// (mais simples de implementar, mais difícil de validar a expressão, se ela
+// conter mais de um operador)
