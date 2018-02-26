@@ -1,8 +1,6 @@
-// Este arquivo de formato .js é o nosso script
-// escrito em JavaScript.
-// JavaScript é o que faz a calculadora funcionar!
-
-// Esse comentário inicial ^ pode ser transformado em multiline
+/****************************************************  
+ Vamos fazer o visor mostrar os números
+****************************************************/
 
 /* Sem usar definição de função (mostrar esse jeito primeiro)
 
@@ -39,16 +37,17 @@ numButtons.forEach(numButton => numButton.addEventListener("click", function (ev
     // visor.innerHTML = visorNow + num;
 })); */
 
+let visor = document.querySelector(".visor");
+
 function keyClicked(event) {
     // mostrar como imprimir no console ajuda a saber q está funcionando
     console.log(event.srcElement.innerText);
 
-    let visor = document.querySelector(".visor");
-    // essa variável não precisava existir, é apenas para ficar mais
-    // fácil de entender o que significa visor.innerHTML
-    let visorNow = visor.innerHTML;
-    
     let key = event.srcElement.innerText;
+
+    // essa variável não precisava existir, é apenas para ficar mais
+    // fácil de entender o que significa visor.innerText
+    let visorNow = visor.innerHTML;
 
     if (key === "C") {
         visor.innerHTML = "";
@@ -65,14 +64,30 @@ numButtons.forEach(numButton => numButton.addEventListener("click", keyClicked))
  Nesse ponto, o numpad está completamente funcional
 ****************************************************/
 
-// Podemos fazer o "fluxo" das operações de pelo menos duas formas
+/****************************************************  
+ Vamos fazer as operações funcionarem
+****************************************************/
 
-// 1 - O número que está no visor "pisca" quando clicamos na operação
-// e o visor é "reiniciado" quando digitamos um número de novo.
-// (um pouco mais difícil de implementar, mas mais fácil de validar a expressão)
+function opKeyClicked(event) {
+    let operation = event.srcElement.innerText;
+    let visorNow = visor.innerText;
 
-// 2 - As operações são colocadas no visor sem limpar o visor, ou seja,
-// o usuário digita a expressão completa no visor e a expressão é validada
-// quando usamos o '='.
-// (mais simples de implementar, mais difícil de validar a expressão, se ela
-// conter mais de um operador)
+    if (operation !== '='){
+        // No lugar de apenas dar um append no operador, vamos usar a nova
+        // formatação de string (do ES6) para colocar espaços na expressão
+        visor.innerText = `${visorNow} ${operation} `;
+    }
+    else if (operation === '='){
+        let result = eval(visorNow);
+        console.log(result);
+        visor.innerText = result;
+    }
+    else return;
+}
+
+const opButtons = document.querySelectorAll('.opbtn');
+opButtons.forEach(numButton => numButton.addEventListener("click", opKeyClicked));
+
+/****************************************************  
+ Nesse ponto, a calculadora funciona completamente
+****************************************************/
