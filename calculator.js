@@ -68,6 +68,7 @@ numButtons.forEach(numButton => numButton.addEventListener("click", keyClicked))
  Vamos fazer as operações funcionarem
 ****************************************************/
 
+
 function opKeyClicked(event) {
     let operation = event.srcElement.innerText;
     let visorNow = visor.innerText;
@@ -82,7 +83,6 @@ function opKeyClicked(event) {
         console.log(result);
         visor.innerText = result;
     }
-    else return;
 }
 
 const opButtons = document.querySelectorAll('.opbtn');
