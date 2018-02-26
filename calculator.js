@@ -79,6 +79,7 @@ function opKeyClicked(event) {
         visor.innerText = `${visorNow} ${operation} `;
     }
     else if (operation === '='){
+        visorNow = visorNow.replace(/\^/g, "\*\*");
         let result = eval(visorNow);
         console.log(result);
         visor.innerText = result;
