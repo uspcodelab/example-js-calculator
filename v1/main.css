@@ -1,0 +1,119 @@
+:root {
+	--orangeUCL: #FFA46D;
+  }
+  
+  html, body {
+	  display: grid;
+	  margin: 0;
+	  background-color: #333;
+  
+  }
+  
+
+  .container {
+	  background-color: #ABC;
+	  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+	  border-radius: 0.3em;
+	  display: grid;
+	  min-width: 28em;
+	  height:100vh;
+  }
+  
+  .calc {
+	  display: grid;
+	  grid-template-columns: 75% 25%;
+	  grid-template-rows: 25vh 1em auto;
+  }
+  
+  .visorFrame {
+	  grid-column-start: 1;
+	  grid-column-end: 3;
+	  grid-row-start: 1;
+	  grid-row-end: 2;
+	  background-color: #FAFAFA;
+	  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+	  border-radius: 0.3em 0.3em 0em 0em;
+	  overflow:auto;
+  }
+  
+  .numpad {
+	  grid-column-start: 1;
+	  grid-column-end: 2;
+	  grid-row-start: 3;
+	  grid-row-end: 4;
+	  padding: 10px;
+	  display: inline-grid;
+	  grid-template-columns: auto auto auto;
+	  grid-template-rows: auto auto auto auto;
+  }
+  
+  .oppad {
+	  grid-column-start: 2;
+	  grid-column-end: 3;
+	  grid-row-start: 3;
+	  grid-row-end: 4;
+	  padding: 10px 10px 10px 0px;
+	  display: inline-grid;
+	  grid-template-columns: auto auto;
+	  grid-template-rows: auto auto auto;
+  }
+
+  .numbtn, .opbtn{
+  	height: 100%;
+  	width: 100%;
+  	font-size: 10vh;
+  	text-align:center;
+  	font-family: "Arial";
+  	font-style: bold;
+  	display: inline-grid;
+  }
+
+  .num_wrapper {
+  	background-color: #EFEFEF;
+  	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  	border-radius: 0.3em;
+  	margin: 0.3em;
+  	width: auto;
+  }
+
+  .num_wrapper:hover, .opbtn:hover {
+  	background-color: #EAEAEA;
+  }
+
+  .num_wrapper:active, .opbtn:active {
+  	background-color: #EEE;
+  }
+
+  .opbtn {
+  	background-color: #E2E2E2 ;
+  	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+  	margin: 0.1em;
+  	height: auto;
+  	width: auto;
+  	border-radius: 0.1em;
+  }
+
+  .visor {
+  	font-size: 20vh;
+  	text-align: end;
+  	font-family: "Arial";
+  	font-style: bold;
+  	overflow: auto;
+  	margin-right: 2vh;
+  }
+
+  #equal {
+  	background-color: #d8783e;
+  }
+
+  #equal:hover {
+  	background-color:  #FFA46D;
+  }
+
+  #equal:active {
+  	background-color: #ff9e63;
+  }
+
+  .cell {
+  	align-self:center;
+  }
